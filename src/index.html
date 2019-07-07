@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <button id="send">在 渲染进程中执行主进程里的方法（异步）</button> 
+    </p>
+    
+    <p>
+        <button id="sendFeedback">在 渲染进程中执行主进程里的方法，并反馈给主进程（异步）</button>
+    </p>
+    <p>
+        <button id="sendSync">渲染进程和主进程同步通信</button>
+    </p>
+    <p>
+        <button id="openWindow">打开新窗口通信</button>
+    </p>
+    <ul>
+        <li><button id="showError">showError</button></li>
+        <li><button id="showMessageBox">showMessageBox</button></li>
+        <li><button id="showOpenDialog">showOpenDialog</button></li>
+        <li><button id="showSaveDialog">showSaveDialog</button></li>
+    </ul>
+    <p>
+        <button id="notification">click notification</button>
+    </p>
+    <p>
+        <button id="sheelDom">
+            通过shell打开外部链接
+        </button>
+    </p>
+    <div class="copy-text">
+        <h2>双击下面信息复制</h2>
+        <p id="msg">123456</p>
+        <button id="plat">粘贴</button>
+        <input type="text" id="text">
+    </div>
+    <div class="copy-img">
+        <h2>复制图片到界面</h2>
+        <button id="copyImg">复制图片</button>
+    </div>
+
+    <div class="webview-wrapper">
+        webview
+        <webview id="webview" src="https://github.com/GolderBrother" style="position:fixed; width:100%; height:100%">
+        </webview>
+    </div>
+    
+    
+    <script src="render/ipcRender.js"></script>
+    <script src="render/openWindow.js"></script>
+    <script src="render/dialog.js"></script>
+    <script src="render/notification.js"></script>
+    <script src="render/clipboard.js"></script>
+    <script src="render/shell.js"></script>
+    <script src="render/webview.js"></script>
+    
+
+    </body>
+</html>
